@@ -17,7 +17,6 @@ public final class CalendarViewAppearance: NSObject {
     
     public var monthTextAttributes: [NSAttributedString.Key: Any] = [:] { didSet { self.calendarView.applyAppearance() } }
     public var monthSelectedTextAttributes: [NSAttributedString.Key: Any] = [:] { didSet { self.calendarView.applyAppearance() } }
-    public var weekdayTextAttributes: [NSAttributedString.Key: Any] = [:] { didSet { self.calendarView.applyAppearance() } }
     public var yearTextAttributes: [NSAttributedString.Key: Any] = [:] { didSet { self.calendarView.applyAppearance() } }
     public var tintColor: UIColor = .blue { didSet { self.calendarView.applyAppearance() } }
     public var disabledTextAttributes: [NSAttributedString.Key: Any] = [:] { didSet { self.calendarView.applyAppearance() } }

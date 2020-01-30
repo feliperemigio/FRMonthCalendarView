@@ -29,7 +29,7 @@ final class YearHeaderCollectionReusableView: UICollectionReusableView {
     
     func configure(name: String) {
         self.nameLabel.attributedText = NSAttributedString(string: name,
-                                                           attributes: self.appearance?.monthTextAttributes)
+                                                           attributes: self.appearance?.yearTextAttributes)
     }
 }
 

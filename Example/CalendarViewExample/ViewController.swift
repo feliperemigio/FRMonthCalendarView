@@ -21,7 +21,7 @@ final class ViewController: UIViewController {
         self.calendarView.appearance?.monthTextAttributes = [.foregroundColor: UIColor.white,]
         self.calendarView.appearance?.monthSelectedTextAttributes = [.foregroundColor: UIColor.white]
         self.calendarView.appearance?.tintColor = UIColor(red: 243/255, green: 29/255, blue: 29/255, alpha: 1)
-        self.calendarView.appearance?.yearTextAttributes = [.foregroundColor: UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)]
+        self.calendarView.appearance?.yearTextAttributes = [.foregroundColor: UIColor.black]
         self.calendarView.appearance?.disabledTextAttributes = [.foregroundColor: UIColor(red: 136/255, green: 136/255, blue: 136/255, alpha: 1)]
         self.calendarView.appearance?.columnSpacing = 0
         self.calendarView.appearance?.yearHeight = 88
