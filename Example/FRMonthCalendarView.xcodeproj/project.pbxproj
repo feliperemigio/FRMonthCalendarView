@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		848A7F190F4677BD2ED894F5 /* Pods_FRCalendarViewExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5651A970E24A4134AED65543 /* Pods_FRCalendarViewExample.framework */; };
+		23D84FDE43F0CD0E8D9D136A /* Pods_FRMonthCalendarViewExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740FAAB5FB821CA46F204DA3 /* Pods_FRMonthCalendarViewExample.framework */; };
 		FA071CC8235A291D00F093E7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96FA412359083700405286 /* CalendarView.swift */; };
 		FA071CD2235A3EB600F093E7 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA071CCA235A3E3900F093E7 /* UIView+Constraints.swift */; };
 		FA071CD3235A3EB600F093E7 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA071CCB235A3E3900F093E7 /* String+Formatting.swift */; };
@@ -17,18 +17,18 @@
 		FA62724D233E85500011D686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA62724B233E85500011D686 /* Main.storyboard */; };
 		FA62724F233E85520011D686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA62724E233E85520011D686 /* Assets.xcassets */; };
 		FA627252233E85520011D686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA627250233E85520011D686 /* LaunchScreen.storyboard */; };
-		FA96FA422359083700405286 /* MonthCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96FA332359083700405286 /* MonthCollectionView.swift */; };
-		FA96FA432359083700405286 /* MonthHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96FA352359083700405286 /* MonthHeaderCollectionReusableView.swift */; };
+		FA96FA422359083700405286 /* YearCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96FA332359083700405286 /* YearCollectionView.swift */; };
+		FA96FA432359083700405286 /* YearHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96FA352359083700405286 /* YearHeaderCollectionReusableView.swift */; };
 		FA96FA442359083700405286 /* CalendarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96FA382359083700405286 /* CalendarCollectionViewController.swift */; };
 		FA96FA452359083700405286 /* CalendarViewAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96FA392359083700405286 /* CalendarViewAppearance.swift */; };
-		FA96FA472359083700405286 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96FA3C2359083700405286 /* DayCollectionViewCell.swift */; };
-		FA96FA482359083700405286 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96FA3E2359083700405286 /* MonthCollectionViewCell.swift */; };
+		FA96FA472359083700405286 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96FA3C2359083700405286 /* MonthCollectionViewCell.swift */; };
+		FA96FA482359083700405286 /* YearCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA96FA3E2359083700405286 /* YearCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1CC06CD724A7FDE6C00EF717 /* Pods-FRCalendarViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRCalendarViewExample.release.xcconfig"; path = "Target Support Files/Pods-FRCalendarViewExample/Pods-FRCalendarViewExample.release.xcconfig"; sourceTree = "<group>"; };
-		42D557511B99E85A7961E5D8 /* Pods-FRCalendarViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRCalendarViewExample.debug.xcconfig"; path = "Target Support Files/Pods-FRCalendarViewExample/Pods-FRCalendarViewExample.debug.xcconfig"; sourceTree = "<group>"; };
-		5651A970E24A4134AED65543 /* Pods_FRCalendarViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRCalendarViewExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DBD3890C26B8DAB30F9B452 /* Pods-FRMonthCalendarViewExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRMonthCalendarViewExample.release.xcconfig"; path = "Target Support Files/Pods-FRMonthCalendarViewExample/Pods-FRMonthCalendarViewExample.release.xcconfig"; sourceTree = "<group>"; };
+		740FAAB5FB821CA46F204DA3 /* Pods_FRMonthCalendarViewExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FRMonthCalendarViewExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B78351E8D54004FDF51A479D /* Pods-FRMonthCalendarViewExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FRMonthCalendarViewExample.debug.xcconfig"; path = "Target Support Files/Pods-FRMonthCalendarViewExample/Pods-FRMonthCalendarViewExample.debug.xcconfig"; sourceTree = "<group>"; };
 		FA071CCA235A3E3900F093E7 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		FA071CCB235A3E3900F093E7 /* String+Formatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
 		FA071CCC235A3E3900F093E7 /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
@@ -40,12 +40,12 @@
 		FA62724E233E85520011D686 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA627251233E85520011D686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA627253233E85520011D686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA96FA332359083700405286 /* MonthCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCollectionView.swift; sourceTree = "<group>"; };
-		FA96FA352359083700405286 /* MonthHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		FA96FA332359083700405286 /* YearCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearCollectionView.swift; sourceTree = "<group>"; };
+		FA96FA352359083700405286 /* YearHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		FA96FA382359083700405286 /* CalendarCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewController.swift; sourceTree = "<group>"; };
 		FA96FA392359083700405286 /* CalendarViewAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewAppearance.swift; sourceTree = "<group>"; };
-		FA96FA3C2359083700405286 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
-		FA96FA3E2359083700405286 /* MonthCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA96FA3C2359083700405286 /* MonthCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA96FA3E2359083700405286 /* YearCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YearCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA96FA402359083700405286 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA96FA412359083700405286 /* CalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,28 +62,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				848A7F190F4677BD2ED894F5 /* Pods_FRCalendarViewExample.framework in Frameworks */,
+				23D84FDE43F0CD0E8D9D136A /* Pods_FRMonthCalendarViewExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2E226280A3633D7C3A3B3ABF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5651A970E24A4134AED65543 /* Pods_FRCalendarViewExample.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		61413003AC9EAAF0D7D5A174 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				42D557511B99E85A7961E5D8 /* Pods-FRCalendarViewExample.debug.xcconfig */,
-				1CC06CD724A7FDE6C00EF717 /* Pods-FRCalendarViewExample.release.xcconfig */,
+				B78351E8D54004FDF51A479D /* Pods-FRMonthCalendarViewExample.debug.xcconfig */,
+				5DBD3890C26B8DAB30F9B452 /* Pods-FRMonthCalendarViewExample.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C9D8327948D5EDAE1B119765 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				740FAAB5FB821CA46F204DA3 /* Pods_FRMonthCalendarViewExample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FA071CC9235A3E3900F093E7 /* Extensions */ = {
@@ -103,7 +103,7 @@
 				FA627246233E85500011D686 /* CalendarViewExample */,
 				FA62722A233E84F30011D686 /* Products */,
 				61413003AC9EAAF0D7D5A174 /* Pods */,
-				2E226280A3633D7C3A3B3ABF /* Frameworks */,
+				C9D8327948D5EDAE1B119765 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,7 +149,7 @@
 		FA96FA322359083700405286 /* Month */ = {
 			isa = PBXGroup;
 			children = (
-				FA96FA332359083700405286 /* MonthCollectionView.swift */,
+				FA96FA332359083700405286 /* YearCollectionView.swift */,
 			);
 			path = Month;
 			sourceTree = "<group>";
@@ -157,7 +157,7 @@
 		FA96FA342359083700405286 /* MonthHeader */ = {
 			isa = PBXGroup;
 			children = (
-				FA96FA352359083700405286 /* MonthHeaderCollectionReusableView.swift */,
+				FA96FA352359083700405286 /* YearHeaderCollectionReusableView.swift */,
 			);
 			path = MonthHeader;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 		FA96FA3B2359083700405286 /* DayCell */ = {
 			isa = PBXGroup;
 			children = (
-				FA96FA3C2359083700405286 /* DayCollectionViewCell.swift */,
+				FA96FA3C2359083700405286 /* MonthCollectionViewCell.swift */,
 			);
 			path = DayCell;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 		FA96FA3D2359083700405286 /* MonthCell */ = {
 			isa = PBXGroup;
 			children = (
-				FA96FA3E2359083700405286 /* MonthCollectionViewCell.swift */,
+				FA96FA3E2359083700405286 /* YearCollectionViewCell.swift */,
 			);
 			path = MonthCell;
 			sourceTree = "<group>";
@@ -221,11 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA627254233E85520011D686 /* Build configuration list for PBXNativeTarget "FRMonthCalendarViewExample" */;
 			buildPhases = (
-				CE6988F62EDD2D2071C47F01 /* [CP] Check Pods Manifest.lock */,
+				40AE101F71C956E3417B1B5B /* [CP] Check Pods Manifest.lock */,
 				FA627241233E85500011D686 /* Sources */,
 				FA627242233E85500011D686 /* Frameworks */,
 				FA627243233E85500011D686 /* Resources */,
-				413581A74A6B61C57A329699 /* [CP] Embed Pods Frameworks */,
+				9C296A60501CF94DE009D9F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,24 +294,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		413581A74A6B61C57A329699 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FRCalendarViewExample/Pods-FRCalendarViewExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FRCalendarViewExample/Pods-FRCalendarViewExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FRCalendarViewExample/Pods-FRCalendarViewExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE6988F62EDD2D2071C47F01 /* [CP] Check Pods Manifest.lock */ = {
+		40AE101F71C956E3417B1B5B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,11 +309,28 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FRCalendarViewExample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FRMonthCalendarViewExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C296A60501CF94DE009D9F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FRMonthCalendarViewExample/Pods-FRMonthCalendarViewExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FRMonthCalendarViewExample/Pods-FRMonthCalendarViewExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FRMonthCalendarViewExample/Pods-FRMonthCalendarViewExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -343,13 +343,13 @@
 				FA071CD2235A3EB600F093E7 /* UIView+Constraints.swift in Sources */,
 				FA071CD3235A3EB600F093E7 /* String+Formatting.swift in Sources */,
 				FA071CD4235A3EB600F093E7 /* Date+Utils.swift in Sources */,
-				FA96FA472359083700405286 /* DayCollectionViewCell.swift in Sources */,
+				FA96FA472359083700405286 /* MonthCollectionViewCell.swift in Sources */,
 				FA071CC8235A291D00F093E7 /* CalendarView.swift in Sources */,
 				FA96FA452359083700405286 /* CalendarViewAppearance.swift in Sources */,
-				FA96FA422359083700405286 /* MonthCollectionView.swift in Sources */,
+				FA96FA422359083700405286 /* YearCollectionView.swift in Sources */,
 				FA96FA442359083700405286 /* CalendarCollectionViewController.swift in Sources */,
-				FA96FA432359083700405286 /* MonthHeaderCollectionReusableView.swift in Sources */,
-				FA96FA482359083700405286 /* MonthCollectionViewCell.swift in Sources */,
+				FA96FA432359083700405286 /* YearHeaderCollectionReusableView.swift in Sources */,
+				FA96FA482359083700405286 /* YearCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +562,7 @@
 		};
 		FA627255233E85520011D686 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42D557511B99E85A7961E5D8 /* Pods-FRCalendarViewExample.debug.xcconfig */;
+			baseConfigurationReference = B78351E8D54004FDF51A479D /* Pods-FRMonthCalendarViewExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -577,7 +577,7 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
-					"\"FRCalendarView\"",
+					"\"FRMonthCalendarView\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wingsdev.br.CalendarViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -588,7 +588,7 @@
 		};
 		FA627256233E85520011D686 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CC06CD724A7FDE6C00EF717 /* Pods-FRCalendarViewExample.release.xcconfig */;
+			baseConfigurationReference = 5DBD3890C26B8DAB30F9B452 /* Pods-FRMonthCalendarViewExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -603,7 +603,7 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
-					"\"FRCalendarView\"",
+					"\"FRMonthCalendarView\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wingsdev.br.CalendarViewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,0 +1,24 @@
+{
+  "name": "FRMonthCalendarView",
+  "version": "0.1.6",
+  "summary": "FRMonthCalendarView is a view to present a calendar",
+  "description": "FRMonthCalendarView is a view to present a calendar",
+  "homepage": "https://github.com/feliperemigio/month-calendar-apple",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Wings Development": "https://www.wingsdev.com/"
+  },
+  "source": {
+    "git": "https://github.com/feliperemigio/month-calendar-apple.git",
+    "tag": "0.1.6"
+  },
+  "platforms": {
+    "ios": "10.3"
+  },
+  "swift_versions": "4.2",
+  "source_files": "Classes/**/*.{swift}",
+  "swift_version": "4.2"
+}

@@ -82,7 +82,7 @@ final class CalendarCollectionViewController: UICollectionViewController, UIColl
         self.collectionView.isPagingEnabled = true
         self.collectionView.backgroundColor = .clear
         self.collectionView.showsHorizontalScrollIndicator = false
-        self.collectionView.register(MonthCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView.register(YearCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         guard  let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
         layout.scrollDirection = self.appearance?.scrollDirection ?? .horizontal
         layout.minimumLineSpacing = 0
@@ -121,16 +121,17 @@ final class CalendarCollectionViewController: UICollectionViewController, UIColl
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let minDateComponents = Calendar.current.dateComponents([.month, .year], from: self.minDate)
         let maxDateComponents = Calendar.current.dateComponents([.month, .year], from: self.maxDate)
-        let months = Calendar.current.dateComponents([.month], from: minDateComponents, to: maxDateComponents )
-        return months.month! + 1
+        let years = Calendar.current.dateComponents([.year], from: minDateComponents, to: maxDateComponents )
+        return years.year! + 1
     }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? MonthCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? YearCollectionViewCell else {
             return UICollectionViewCell()
         }
         
         let firstDate = createDate(withMonthPosition: indexPath.item)
-        let availableDays = self.appearance?.calendarView.dataSource?.dates?(at: firstDate)?.map({$0.day})
+        let availableDays = self.appearance?.calendarView.dataSource?.dates?(at: firstDate)?.map({$0.month})
         let eventsDays = self.appearance?.calendarView.dataSource?.datesWithEvents?(at: firstDate)?.map({$0.day})
         cell.configure(date: firstDate,
                        allowMultipleSelection: self.allowMultipleSelection,
@@ -248,7 +249,7 @@ extension CalendarCollectionViewController: AppearanceProtocol {
         }
         
         self.collectionView.visibleCells.forEach({ cell in
-            if let calendarMonthCollectionViewCell = cell as? MonthCollectionViewCell {
+            if let calendarMonthCollectionViewCell = cell as? YearCollectionViewCell {
                 calendarMonthCollectionViewCell.applyAppearance(appearance: self.appearance)
             }
         })

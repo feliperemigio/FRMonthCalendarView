@@ -1,5 +1,5 @@
 ![Swift Version](https://img.shields.io/badge/Swift-5.0-orange.svg)
-# FRCalendarView  
+# FRMonthCalendarView  
 
 Component to calendar (iOS or tvOS)
 
@@ -12,25 +12,25 @@ You will need CocoaPods and also your project must be targeted fo iOS 10.3 or hi
 
 ## Installation
 
-FRCalendarView is available through [CocoaPods](https://cocoapods.org). To install
+FRMonthCalendarView is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'FRCalendarView'
+pod 'FRMonthCalendarView'
 ```
 
 ## How to use
 
-1. Import the FRCalendarView
+1. Import the FRMonthCalendarView
 
 ```swift 
-import FRCalendarView
+import FRMonthCalendarView
 ```
 
 2. Configure the CalendarView:
 
 ```swift 
-let calendarView = FRCalendarView.CalendarView()
+let calendarView = FRMonthCalendarView.CalendarView()
 self.view.addSubview(calendarView)
 
 self.calendarView.frame = CGRect(x: 0,
