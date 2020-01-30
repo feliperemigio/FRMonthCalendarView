@@ -1,5 +1,5 @@
 PODS:
-  - FRMonthCalendarView (1.0.0)
+  - FRMonthCalendarView (1.0.1)
 
 DEPENDENCIES:
   - FRMonthCalendarView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FRMonthCalendarView: f792366af105cec87272696ba47559781b642e69
+  FRMonthCalendarView: d882aaff5b71dbfc895981ac2d44f623531b1901
 
 PODFILE CHECKSUM: 6285acdd57b2b3ef4e6498796a399b59c3b34562
 

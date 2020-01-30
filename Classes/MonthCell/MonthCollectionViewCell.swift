@@ -93,7 +93,7 @@ extension MonthCollectionViewCell: MonthCollectionViewCellProtocol {
     
     func select() {
         let cornerRadius: CGFloat
-        if let daySelectedCornerRadius = self.appearance?.daySelectedCornerRadius{
+        if let daySelectedCornerRadius = self.appearance?.monthSelectedCornerRadius{
             cornerRadius = daySelectedCornerRadius
         } else {
             cornerRadius = self.sizeSelected.height / 2
@@ -107,7 +107,7 @@ extension MonthCollectionViewCell: MonthCollectionViewCellProtocol {
         self.sendSubviewToBack(selectedView!)
         
         self.textLabel.attributedText = NSAttributedString(string: self.textLabel.text ?? "",
-                                                             attributes: self.appearance?.daySelectedTextAttributes)
+                                                             attributes: self.appearance?.monthSelectedTextAttributes)
        
         OperationQueue.main.addOperation {
              self.selectedView?.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
@@ -168,13 +168,13 @@ extension MonthCollectionViewCell: MonthCollectionViewCellProtocol {
         let day: String
         
         if let date = date {
-            day = String(date.toString(format: "MMM") ?? "")
+            day = String(date.toString(format: "MMM") ?? "").firstCapitalized
         } else {
             day = ""
         }
         
         self.textLabel.attributedText = NSAttributedString(string: day,
-                                                             attributes: self.appearance?.dayTextAttributes)
+                                                             attributes: self.appearance?.monthTextAttributes)
     }
 }
 

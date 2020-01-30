@@ -157,7 +157,7 @@ public final class CalendarView: UIView {
         
         self.addSubview(controlsView)
         controlsView.anchorCenterXToSuperview()
-        controlsView.anchor(height: self.appearance.monthHeight, width: self.appearance.calendarWidth)
+        controlsView.anchor(height: self.appearance.yearHeight, width: self.appearance.calendarWidth)
     }
     
     private func addToControlView(button: UIButton?) {

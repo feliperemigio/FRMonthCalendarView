@@ -11,13 +11,13 @@
 		46EB2E000002D0 /* CalendarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000000E0 /* CalendarCollectionViewController.swift */; };
 		46EB2E000002E0 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000000F0 /* CalendarView.swift */; };
 		46EB2E000002F0 /* CalendarViewAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000100 /* CalendarViewAppearance.swift */; };
-		46EB2E00000300 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000120 /* MonthCollectionViewCell.swift */; };
-		46EB2E00000310 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000140 /* Date+Utils.swift */; };
-		46EB2E00000320 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000150 /* String+Formatting.swift */; };
-		46EB2E00000330 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000160 /* UIView+Constraints.swift */; };
-		46EB2E00000340 /* YearCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000180 /* YearCollectionView.swift */; };
-		46EB2E00000350 /* YearCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001A0 /* YearCollectionViewCell.swift */; };
-		46EB2E00000360 /* YearHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001C0 /* YearHeaderCollectionReusableView.swift */; };
+		46EB2E00000300 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000120 /* Date+Utils.swift */; };
+		46EB2E00000310 /* String+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000130 /* String+Formatting.swift */; };
+		46EB2E00000320 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000140 /* UIView+Constraints.swift */; };
+		46EB2E00000330 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000160 /* MonthCollectionViewCell.swift */; };
+		46EB2E00000340 /* YearHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000180 /* YearHeaderCollectionReusableView.swift */; };
+		46EB2E00000350 /* YearCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001A0 /* YearCollectionView.swift */; };
+		46EB2E00000360 /* YearCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001C0 /* YearCollectionViewCell.swift */; };
 		46EB2E000003B0 /* FRMonthCalendarView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000003A0 /* FRMonthCalendarView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		46EB2E000003F0 /* FRMonthCalendarView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000003E0 /* FRMonthCalendarView-dummy.m */; };
 		46EB2E00000490 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E000002B0 /* Foundation.framework */; };
@@ -41,13 +41,13 @@
 		46EB2E000000E0 /* CalendarCollectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewController.swift; sourceTree = "<group>"; };
 		46EB2E000000F0 /* CalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarView.swift; path = Classes/CalendarView.swift; sourceTree = "<group>"; };
 		46EB2E00000100 /* CalendarViewAppearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarViewAppearance.swift; path = Classes/CalendarViewAppearance.swift; sourceTree = "<group>"; };
-		46EB2E00000120 /* MonthCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewCell.swift; sourceTree = "<group>"; };
-		46EB2E00000140 /* Date+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
-		46EB2E00000150 /* String+Formatting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
-		46EB2E00000160 /* UIView+Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		46EB2E00000180 /* YearCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YearCollectionView.swift; sourceTree = "<group>"; };
-		46EB2E000001A0 /* YearCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YearCollectionViewCell.swift; sourceTree = "<group>"; };
-		46EB2E000001C0 /* YearHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YearHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		46EB2E00000120 /* Date+Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
+		46EB2E00000130 /* String+Formatting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Formatting.swift"; sourceTree = "<group>"; };
+		46EB2E00000140 /* UIView+Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		46EB2E00000160 /* MonthCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewCell.swift; sourceTree = "<group>"; };
+		46EB2E00000180 /* YearHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YearHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		46EB2E000001A0 /* YearCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YearCollectionView.swift; sourceTree = "<group>"; };
+		46EB2E000001C0 /* YearCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YearCollectionViewCell.swift; sourceTree = "<group>"; };
 		46EB2E000001E0 /* FRMonthCalendarView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FRMonthCalendarView.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		46EB2E000001F0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		46EB2E00000200 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
@@ -140,13 +140,13 @@
 				46EB2E000000F0 /* CalendarView.swift */,
 				46EB2E00000100 /* CalendarViewAppearance.swift */,
 				46EB2E000000D0 /* Calendar */,
-				46EB2E00000110 /* DayCell */,
-				46EB2E00000130 /* Extensions */,
-				46EB2E00000170 /* Month */,
-				46EB2E00000190 /* MonthCell */,
-				46EB2E000001B0 /* MonthHeader */,
+				46EB2E00000110 /* Extensions */,
+				46EB2E00000150 /* MonthCell */,
+				46EB2E00000170 /* MonthHeader */,
 				46EB2E000001D0 /* Pod */,
 				46EB2E00000370 /* Support Files */,
+				46EB2E00000190 /* Year */,
+				46EB2E000001B0 /* YearCell */,
 			);
 			name = FRMonthCalendarView;
 			path = ../..;
@@ -161,51 +161,51 @@
 			path = Classes/Calendar;
 			sourceTree = "<group>";
 		};
-		46EB2E00000110 /* DayCell */ = {
+		46EB2E00000110 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000120 /* MonthCollectionViewCell.swift */,
-			);
-			name = DayCell;
-			path = Classes/DayCell;
-			sourceTree = "<group>";
-		};
-		46EB2E00000130 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				46EB2E00000140 /* Date+Utils.swift */,
-				46EB2E00000150 /* String+Formatting.swift */,
-				46EB2E00000160 /* UIView+Constraints.swift */,
+				46EB2E00000120 /* Date+Utils.swift */,
+				46EB2E00000130 /* String+Formatting.swift */,
+				46EB2E00000140 /* UIView+Constraints.swift */,
 			);
 			name = Extensions;
 			path = Classes/Extensions;
 			sourceTree = "<group>";
 		};
-		46EB2E00000170 /* Month */ = {
+		46EB2E00000150 /* MonthCell */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000180 /* YearCollectionView.swift */,
-			);
-			name = Month;
-			path = Classes/Month;
-			sourceTree = "<group>";
-		};
-		46EB2E00000190 /* MonthCell */ = {
-			isa = PBXGroup;
-			children = (
-				46EB2E000001A0 /* YearCollectionViewCell.swift */,
+				46EB2E00000160 /* MonthCollectionViewCell.swift */,
 			);
 			name = MonthCell;
 			path = Classes/MonthCell;
 			sourceTree = "<group>";
 		};
-		46EB2E000001B0 /* MonthHeader */ = {
+		46EB2E00000170 /* MonthHeader */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000001C0 /* YearHeaderCollectionReusableView.swift */,
+				46EB2E00000180 /* YearHeaderCollectionReusableView.swift */,
 			);
 			name = MonthHeader;
 			path = Classes/MonthHeader;
+			sourceTree = "<group>";
+		};
+		46EB2E00000190 /* Year */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E000001A0 /* YearCollectionView.swift */,
+			);
+			name = Year;
+			path = Classes/Year;
+			sourceTree = "<group>";
+		};
+		46EB2E000001B0 /* YearCell */ = {
+			isa = PBXGroup;
+			children = (
+				46EB2E000001C0 /* YearCollectionViewCell.swift */,
+			);
+			name = YearCell;
+			path = Classes/YearCell;
 			sourceTree = "<group>";
 		};
 		46EB2E000001D0 /* Pod */ = {
@@ -369,14 +369,14 @@
 				46EB2E000002D0 /* CalendarCollectionViewController.swift in Sources */,
 				46EB2E000002E0 /* CalendarView.swift in Sources */,
 				46EB2E000002F0 /* CalendarViewAppearance.swift in Sources */,
-				46EB2E00000310 /* Date+Utils.swift in Sources */,
+				46EB2E00000300 /* Date+Utils.swift in Sources */,
 				46EB2E000003F0 /* FRMonthCalendarView-dummy.m in Sources */,
-				46EB2E00000300 /* MonthCollectionViewCell.swift in Sources */,
-				46EB2E00000320 /* String+Formatting.swift in Sources */,
-				46EB2E00000330 /* UIView+Constraints.swift in Sources */,
-				46EB2E00000340 /* YearCollectionView.swift in Sources */,
-				46EB2E00000350 /* YearCollectionViewCell.swift in Sources */,
-				46EB2E00000360 /* YearHeaderCollectionReusableView.swift in Sources */,
+				46EB2E00000330 /* MonthCollectionViewCell.swift in Sources */,
+				46EB2E00000310 /* String+Formatting.swift in Sources */,
+				46EB2E00000320 /* UIView+Constraints.swift in Sources */,
+				46EB2E00000350 /* YearCollectionView.swift in Sources */,
+				46EB2E00000360 /* YearCollectionViewCell.swift in Sources */,
+				46EB2E00000340 /* YearHeaderCollectionReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

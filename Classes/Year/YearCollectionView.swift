@@ -87,7 +87,7 @@ final class YearCollectionView: UICollectionViewController, UICollectionViewDele
             return false
         }
         
-        return self.eventsDays?.contains(date.day) ?? true
+        return self.eventsDays?.contains(date.day) ?? false
     }
     
     //MARK: CollectionViewDelegate & CollectionViewDatasource
@@ -177,7 +177,7 @@ final class YearCollectionView: UICollectionViewController, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: self.collectionView.bounds.width, height: self.appearance?.monthHeight ?? 50)
+        return CGSize(width: self.collectionView.bounds.width, height: self.appearance?.yearHeight ?? 50)
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

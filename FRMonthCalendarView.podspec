@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FRMonthCalendarView'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'FRMonthCalendarView is a view to present a calendar'
   s.description      = 'FRMonthCalendarView is a view to present a calendar'
 
