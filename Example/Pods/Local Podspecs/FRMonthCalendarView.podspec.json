@@ -1,6 +1,6 @@
 {
   "name": "FRMonthCalendarView",
-  "version": "0.1.6",
+  "version": "1.0.0",
   "summary": "FRMonthCalendarView is a view to present a calendar",
   "description": "FRMonthCalendarView is a view to present a calendar",
   "homepage": "https://github.com/feliperemigio/month-calendar-apple",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/feliperemigio/month-calendar-apple.git",
-    "tag": "0.1.6"
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "10.3"

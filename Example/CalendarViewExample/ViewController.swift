@@ -32,11 +32,11 @@ final class ViewController: UIViewController {
         self.calendarView.appearance?.separatorColor = .white
         self.calendarView.appearance?.weekDayCharactersLimit = 3
         self.calendarView.appearance?.daySelectedCornerRadius = 10
-        self.calendarView.appearance?.dayItemSize = CGSize(width: 56, height: 56)
+        self.calendarView.appearance?.monthItemSize = CGSize(width: 56, height: 56)
         self.calendarView.appearance?.backgroundDayBetweenSelectedDatesHeight = 46
         
         
-        self.calendarView.minDate = Date()
+        self.calendarView.minDate = Calendar.current.date(byAdding: .year, value: -2, to: Date())!
         self.calendarView.maxDate = Calendar.current.date(byAdding: .month, value: 4, to: Date()) ?? Date()
         self.calendarView.allowMultipleSelection = true
         self.calendarView.currentMonth = Calendar.current.date(byAdding: .month, value: 2, to: Date())!
@@ -54,9 +54,9 @@ final class ViewController: UIViewController {
 
 extension ViewController: CalendarViewDataSource {
     func dates(at month: Date) -> [Date]? {
-        return [Calendar.current.date(byAdding: .day, value: -24, to: Date())!,
-                Calendar.current.date(byAdding: .day, value: -23, to: Date())!,
-                Calendar.current.date(byAdding: .day, value: -22, to: Date())!,
+        return [Calendar.current.date(byAdding: .month, value: -24, to: Date())!,
+                Calendar.current.date(byAdding: .month, value: -12, to: Date())!,
+                Calendar.current.date(byAdding: .month, value: 12, to: Date())!,
                 Calendar.current.date(byAdding: .month, value: 1, to: Date())!,
                 Calendar.current.date(byAdding: .month, value: 2, to: Date())!,
                 Calendar.current.date(byAdding: .month, value: 3, to: Date())!]

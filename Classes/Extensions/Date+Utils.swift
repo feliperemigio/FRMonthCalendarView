@@ -7,7 +7,15 @@
 
 import Foundation
 
+
 extension Date {
+    func toString(format: String) -> String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        formatter.locale = Locale(identifier: "pt_BR")
+        
+        return formatter.string(from: self)
+    }
     
     var day: Int {
         let myCalendar = self.setUpGregorianCalendar()
@@ -37,6 +45,7 @@ extension Date {
         let calendar = self.setUpGregorianCalendar()
         
         var components = calendar.dateComponents([.month, .year], from: self)
+        components.month = 1
         components.day = 1
         return calendar.date(from: components)!
     }
@@ -45,7 +54,8 @@ extension Date {
         let calendar = self.setUpGregorianCalendar()
         
         var components = calendar.dateComponents([.month, .year], from: self)
-        components.day = -1
+        components.month = 12
+        components.day = 1
         return calendar.date(from: components)!
     }
     
@@ -122,7 +132,7 @@ extension Date {
     
     func equalsDay(date: Date) -> Bool {
         let calendar = self.setUpGregorianCalendar()
-        return calendar.compare(self, to: date, toGranularity: .day) == ComparisonResult.orderedSame
+        return calendar.compare(self, to: date, toGranularity: .month) == ComparisonResult.orderedSame && calendar.compare(self, to: date, toGranularity: .year) == ComparisonResult.orderedSame
     }
     
     func setUpGregorianCalendar() -> Calendar {

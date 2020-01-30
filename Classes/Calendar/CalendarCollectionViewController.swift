@@ -196,7 +196,7 @@ final class CalendarCollectionViewController: UICollectionViewController, UIColl
     // MARK: - Private functions
     
     private func createDate(withMonthPosition at: Int) -> Date {
-        return Calendar.current.date(byAdding: .month, value: at, to: self.minDate.firstDate)!
+        return Calendar.current.date(byAdding: .year, value: at, to: self.minDate.firstDate)!
     }
     
     private var indexPathForVisibleItem: IndexPath? {

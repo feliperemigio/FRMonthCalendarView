@@ -23,7 +23,7 @@ public final class CalendarViewAppearance: NSObject {
     public var disabledTextAttributes: [NSAttributedString.Key: Any] = [:] { didSet { self.calendarView.applyAppearance() } }
     public var columnSpacing: CGFloat = 0.0 { didSet { self.calendarView.applyAppearance() } }
     public var lineSpacing: CGFloat = 0.0 { didSet { self.calendarView.applyAppearance() } }
-    public var dayItemSize: CGSize = CGSize(width: 40, height: 40) { didSet { self.calendarView.applyAppearance() } }
+    public var monthItemSize: CGSize = CGSize(width: 40, height: 40) { didSet { self.calendarView.applyAppearance() } }
     public var monthHeight: CGFloat = 50 { didSet { self.calendarView.applyAppearance() } }
     public var timeZone: TimeZone? = nil {
         didSet {
@@ -47,19 +47,19 @@ public final class CalendarViewAppearance: NSObject {
         let totalSpacing = columnSpacing * CGFloat(days - 1)
         let contentSize = self.calendarView.bounds.width - totalSpacing
         let minimumWidth = contentSize / CGFloat(days)
-        guard self.dayItemSize.width < minimumWidth else {
+        guard self.monthItemSize.width < minimumWidth else {
             return minimumWidth * CGFloat(days)
         }
         
-        return (dayItemSize.width * CGFloat(days) + totalSpacing)
+        return (monthItemSize.width * CGFloat(days) + totalSpacing)
     }
     
     var calendarHeight: CGFloat {
-        let lines = 7
+        let lines = 3
         let lineSpacing = self.lineSpacing
-        let totalSpacing = lineSpacing * CGFloat(lines - 1) + self.monthHeight
+        let totalSpacing = lineSpacing * CGFloat(lines - 1) + self.monthHeight + 32
         
-        return (dayItemSize.height * CGFloat(lines) + totalSpacing)
+        return (monthItemSize.height * CGFloat(lines) + totalSpacing)
     }
     
     init(_ calendarView: CalendarView) {

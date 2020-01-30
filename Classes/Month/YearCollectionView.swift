@@ -26,7 +26,7 @@ final class YearCollectionView: UICollectionViewController, UICollectionViewDele
     var availableDays: [Int]? = nil
     var eventsDays: [Int]? = nil
     
-    private let days = 7
+    private let columns = 4
     
     private var appearance: CalendarViewAppearance? = nil {
         didSet {
@@ -37,16 +37,16 @@ final class YearCollectionView: UICollectionViewController, UICollectionViewDele
             var extraSpace: CGFloat = 0.0
             
             let columnSpacing = appearance.columnSpacing
-            let totalSpacing = columnSpacing * CGFloat(self.days - 1)
+            let totalSpacing = columnSpacing * CGFloat(self.columns - 1)
             let contentSize = appearance.calendarView.bounds.width - totalSpacing
-            let minimumWidth = contentSize / CGFloat(self.days)
+            let minimumWidth = contentSize / CGFloat(self.columns)
             
-            guard appearance.dayItemSize.width < minimumWidth else {
-                sizeItem = CGSize(width: minimumWidth, height: appearance.dayItemSize.height)
+            guard appearance.monthItemSize.width < minimumWidth else {
+                sizeItem = CGSize(width: minimumWidth, height: appearance.monthItemSize.height)
                 return
             }
-            extraSpace = appearance.calendarView.bounds.width - (appearance.dayItemSize.width * CGFloat(self.days) + totalSpacing)
-            sizeItem = appearance.dayItemSize
+            extraSpace = appearance.calendarView.bounds.width - (appearance.monthItemSize.width * CGFloat(self.columns) + totalSpacing)
+            sizeItem = appearance.monthItemSize
             self.collectionView.contentInset = UIEdgeInsets(top: 0, left: extraSpace/2, bottom: 0, right: extraSpace/2)
         }
     }
@@ -104,49 +104,41 @@ final class YearCollectionView: UICollectionViewController, UICollectionViewDele
             cell.applyAppearance(appearance: appearance)
         }
         
-        if self.isWeekday(position: indexPath.item){
-            cell.configure(withWeekday: indexPath.item + 1)
-        } else if self.isBlankDay(indexPath: indexPath) {
-            cell.configure(withDate: nil)
-        } else {
-            let date = self.createDate(withIndexPath: indexPath)
-            cell.configure(withDate: date)
-            
-            if !self.isEnabled(date: date)  {
-                cell.disable()
-            }
-            
+        let date = self.createDate(withIndexPath: indexPath)
+        cell.configure(withDate: date)
+        
+        if !self.isEnabled(date: date)  {
+            cell.disable()
+        }
+        
+        if self.hasEvent(date: date)  {
+            cell.shouldDisplayEvents()
+        }
+        
+        guard let selectedStart = self.appearance?.calendarView.selectedStartDate else{
+            return cell
+        }
+        
+        guard !self.isBetweenSelection(date: date) else {
+            cell.selectHightlight()
             if self.hasEvent(date: date)  {
                 cell.shouldDisplayEvents()
             }
-            
-            guard let selectedStart = self.appearance?.calendarView.selectedStartDate else{
-                return cell
+            return cell
+        }
+        
+        if date.equalsDay(date: selectedStart) {
+            cell.select()
+            if self.appearance?.calendarView.selectedEndDate != nil{
+                cell.selectHalfRight()
             }
-            
-            guard !self.isBetweenSelection(date: date) else {
-                cell.selectHightlight()
-                if self.hasEvent(date: date)  {
-                    cell.shouldDisplayEvents()
-                }
-                return cell
-            }
-            
-            if date.equalsDay(date: selectedStart) {
-                cell.select()
-                if self.appearance?.calendarView.selectedEndDate != nil{
-                    cell.selectHalfRight()
-                }
-            } else if let selectedEnd = self.appearance?.calendarView.selectedEndDate, date.equalsDay(date: selectedEnd) {
-                cell.select()
-                cell.selectHalfLeft()
-            }
-            
-            if self.hasEvent(date: date)  {
-                cell.shouldDisplayEvents()
-            }
-            
-            
+        } else if let selectedEnd = self.appearance?.calendarView.selectedEndDate, date.equalsDay(date: selectedEnd) {
+            cell.select()
+            cell.selectHalfLeft()
+        }
+        
+        if self.hasEvent(date: date)  {
+            cell.shouldDisplayEvents()
         }
         
         return cell
@@ -194,7 +186,7 @@ final class YearCollectionView: UICollectionViewController, UICollectionViewDele
         }
         
         let firstDate = createDate(withMonthPosition: indexPath.section)
-        headerView.configure(name: firstDate.shortDate.firstCapitalized)
+        headerView.configure(name: String(firstDate.year))
         if let appearance = self.appearance {
             headerView.applyAppearance(appearance: appearance)
         }
@@ -214,24 +206,14 @@ final class YearCollectionView: UICollectionViewController, UICollectionViewDele
         return date > selectedStartDate && date < selectedEndDate
     }
     
-    private func isWeekday(position: Int) -> Bool {
-        return position < self.days
-    }
-    
-    private func isBlankDay(indexPath: IndexPath) -> Bool {
-        let blankDays = createDate(withMonthPosition: indexPath.section).firstWeekday - 1
-        return indexPath.item < self.days + blankDays
-    }
-    
     private func createDate(withIndexPath indexPath: IndexPath) -> Date {
-        let blankDays = createDate(withMonthPosition: indexPath.section).firstWeekday - 1
-        let day = indexPath.item - (self.days + blankDays) + 1
-        return createDate(withDay: day, monthPosition: indexPath.section)
+        return createDate(withMonth: indexPath.item + 1, monthPosition: indexPath.section)
     }
     
-    private func createDate(withDay day: Int, monthPosition at: Int) -> Date {
+    private func createDate(withMonth month: Int, monthPosition at: Int) -> Date {
         var components = Calendar.current.dateComponents([.month, .year], from: createDate(withMonthPosition: at))
-        components.day = day
+        components.month = month
+        components.day = 1
         return Calendar.current.date(from: components)!
     }
     

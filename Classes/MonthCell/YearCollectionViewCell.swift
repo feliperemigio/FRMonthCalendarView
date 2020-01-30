@@ -34,8 +34,8 @@ public final class YearCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(date: Date, allowMultipleSelection: Bool = false, availableDays: [Int]?, eventsDays: [Int]? = nil) {
-        self.yearCollectionView?.minDate = date
-        self.yearCollectionView?.maxDate = date
+        self.yearCollectionView?.minDate = date.firstDate
+        self.yearCollectionView?.maxDate = date.lastDate
         self.yearCollectionView?.availableDays = availableDays
         self.yearCollectionView?.eventsDays = eventsDays
         self.yearCollectionView?.allowMultipleSelection = allowMultipleSelection

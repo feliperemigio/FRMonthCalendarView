@@ -28,7 +28,7 @@ final class MonthCollectionViewCell: UICollectionViewCell {
         return CGSize(width: self.frame.size.width - 10, height: self.frame.size.height - 10)
     }
     
-    private let numberLabel: UILabel = {
+    private let textLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         return label
@@ -37,8 +37,8 @@ final class MonthCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addSubview(self.numberLabel)
-        self.numberLabel.anchorCenterSuperview()
+        self.addSubview(self.textLabel)
+        self.textLabel.anchorCenterSuperview()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -53,7 +53,7 @@ final class MonthCollectionViewCell: UICollectionViewCell {
     private func reset() {
         self.backgroundColor = UIColor.clear
         
-        self.numberLabel.backgroundColor = UIColor.clear
+        self.textLabel.backgroundColor = UIColor.clear
         
         selectedView?.removeFromSuperview()
         selectedView = nil
@@ -106,7 +106,7 @@ extension MonthCollectionViewCell: MonthCollectionViewCellProtocol {
         selectedView?.anchor(height: self.sizeSelected.height, width: self.sizeSelected.width)
         self.sendSubviewToBack(selectedView!)
         
-        self.numberLabel.attributedText = NSAttributedString(string: self.numberLabel.text ?? "",
+        self.textLabel.attributedText = NSAttributedString(string: self.textLabel.text ?? "",
                                                              attributes: self.appearance?.daySelectedTextAttributes)
        
         OperationQueue.main.addOperation {
@@ -136,7 +136,7 @@ extension MonthCollectionViewCell: MonthCollectionViewCellProtocol {
     }
     
     func disable() {
-        self.numberLabel.attributedText = NSAttributedString(string: self.numberLabel.text ?? "",
+        self.textLabel.attributedText = NSAttributedString(string: self.textLabel.text ?? "",
                                                              attributes: self.appearance?.disabledTextAttributes)
     }
     
@@ -163,24 +163,17 @@ extension MonthCollectionViewCell: MonthCollectionViewCellProtocol {
         self.sendSubviewToBack(eventView!)
     }
     
-    func configure(withWeekday weekday: Int) {
-        self.date = nil
-        let text = Date().shortDayOfWeekByDay(weekday, charactersLimit: self.appearance?.weekDayCharactersLimit ?? 1)
-        self.numberLabel.attributedText = NSAttributedString(string: text,
-                                                             attributes: self.appearance?.weekdayTextAttributes)
-    }
-    
     func configure(withDate date: Date?) {
         self.date = date
         let day: String
         
         if let date = date {
-            day = String(date.day)
+            day = String(date.toString(format: "MMM") ?? "")
         } else {
             day = ""
         }
         
-        self.numberLabel.attributedText = NSAttributedString(string: day,
+        self.textLabel.attributedText = NSAttributedString(string: day,
                                                              attributes: self.appearance?.dayTextAttributes)
     }
 }
