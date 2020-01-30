@@ -1,0 +1,8 @@
+platform :ios, '10.3'
+
+install! 'cocoapods', :deterministic_uuids => false
+use_frameworks!
+
+target 'FRCalendarViewExample' do
+  pod 'FRCalendarView', :path => '../'
+end

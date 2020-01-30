@@ -1,0 +1,6 @@
+framework module FRCalendarView {
+  umbrella header "FRCalendarView-umbrella.h"
+
+  export *
+  module * { export * }
+}

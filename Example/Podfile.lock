@@ -1,0 +1,16 @@
+PODS:
+  - FRCalendarView (0.1.1)
+
+DEPENDENCIES:
+  - FRCalendarView (from `../`)
+
+EXTERNAL SOURCES:
+  FRCalendarView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FRCalendarView: 3aba7c784af6c6bdd3c8a328ab7dcf1c0d95def7
+
+PODFILE CHECKSUM: 22e2f0c3b257d7e5d49cdea81383cac52a64be9f
+
+COCOAPODS: 1.7.5
