@@ -24,11 +24,11 @@ final class CalendarCollectionViewController: UICollectionViewController, UIColl
     private var page = 0
     
     var minDate = Date() {
-        didSet { self.collectionView.reloadData() }
+        didSet { self.reloadData() }
     }
     
     var maxDate: Date = Calendar.current.date(byAdding: .year, value: 3, to: Date()) ?? Date(){
-        didSet { self.collectionView.reloadData() }
+        didSet { self.reloadData() }
     }
     
     var currentMonth: Date? = nil {
@@ -44,7 +44,7 @@ final class CalendarCollectionViewController: UICollectionViewController, UIColl
             
             
             UIView.transition(with: self.collectionView, duration: 0, options: .transitionCrossDissolve, animations: {
-                self.collectionView.reloadData()
+                self.reloadData()
             }) { _ in
                 let minDateComponents = Calendar.current.dateComponents([.month, .year], from: self.minDate)
                 let maxDateComponents = Calendar.current.dateComponents([.month, .year], from: self.maxDate)
@@ -62,7 +62,7 @@ final class CalendarCollectionViewController: UICollectionViewController, UIColl
     }
     
     var allowMultipleSelection = false {
-        didSet { self.collectionView.reloadData() }
+        didSet { self.reloadData() }
     }
     
     private var isPortrait: Bool = UIDevice.current.orientation.isPortrait
@@ -93,6 +93,21 @@ final class CalendarCollectionViewController: UICollectionViewController, UIColl
         NotificationCenter.default.removeObserver(self)
     }
     
+    private func reloadData() {
+        UIView.animate(withDuration: 0, animations: {self.collectionView.reloadData()}, completion: { finished in
+            if self.appearance.shouldScrollToBottom {
+                let minDateComponents = Calendar.current.dateComponents([.month, .year], from: self.minDate)
+                let maxDateComponents = Calendar.current.dateComponents([.month, .year], from: self.maxDate)
+                let years = Calendar.current.dateComponents([.year], from: minDateComponents, to: maxDateComponents )
+                guard let position = years.year else { return }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    self.collectionView.scrollToItem(at: IndexPath(item: position, section: 0), at: .bottom, animated: false)
+                }
+                
+            }
+        })
+    }
+    
     @objc func rotated() {
         let isPortrait = UIDevice.current.orientation.isPortrait
         guard self.isPortrait != isPortrait, !UIDevice.current.orientation.isFlat else {
@@ -102,7 +117,7 @@ final class CalendarCollectionViewController: UICollectionViewController, UIColl
         self.isPortrait = isPortrait
         
         UIView.transition(with: self.collectionView, duration: 0, options: .transitionCrossDissolve, animations: {
-            self.collectionView.reloadData()
+            self.reloadData()
         }) { _ in
             self.appearance.calendarView.applyAppearance()
             self.collectionView.collectionViewLayout.invalidateLayout()

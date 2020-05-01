@@ -37,6 +37,7 @@ public final class CalendarViewAppearance: NSObject {
     
     public var monthSelectedCornerRadius: CGFloat? { didSet { self.calendarView.applyAppearance() } }
     public var backgroundDayBetweenSelectedDatesHeight: CGFloat? = nil { didSet { self.calendarView.applyAppearance() } }
+    public var shouldScrollToBottom: Bool = false
     
     var calendarWidth: CGFloat {
         let days = 7
